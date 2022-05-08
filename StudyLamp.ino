@@ -1,7 +1,5 @@
-
 #define ledSwitch 6
 #define ledPin 5
-
 int ledBrightness = 255;
 int ledSwitchState = 0;
 
@@ -10,9 +8,7 @@ void timer(int pinVal, float minuteLength) {
         delay(100);
         analogWrite(pinVal, ledBrightness);
         ledSwitchState = digitalRead(ledSwitch);
-        if (ledSwitchState == HIGH) {
-            ledBrightness = ledBrightness + 85;
-        }
+        if (ledSwitchState == HIGH) ledBrightness += 85;
         else if (ledBrightness > 255) {
             ledBrightness = 0;
             analogWrite(pinVal, ledBrightness);
