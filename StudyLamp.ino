@@ -1,34 +1,50 @@
-#define ledSwitch 6
-#define ledPin 5
-int ledBrightness = 255;
-int ledSwitchState = 0;
+class StudyLamp
+{
+private:
+    int ledBrightness = 255;
+    int ledSwitchState = 0;
+    int ledSwitch = 6;
+    int ledPin = 5;
+public:
+    StudyLamp(/* args */);
 
-void timer(int pinVal, float minuteLength) {
-    for (int i = 0; i < minuteLength * 60000; i += 100) {
-        delay(100);
-        analogWrite(pinVal, ledBrightness);
-        ledSwitchState = digitalRead(ledSwitch);
-        if (ledSwitchState == HIGH) ledBrightness += 85;
-        else if (ledBrightness > 255) {
-            ledBrightness = 0;
+    ~StudyLamp();
+    
+    void timer(int pinVal, float minuteLength) {
+        for (int i = 0; i < minuteLength * 60000; i += 100) {
+            delay(100);
             analogWrite(pinVal, ledBrightness);
+            ledSwitchState = digitalRead(ledSwitch);
+            if (ledSwitchState == HIGH) ledBrightness += 85;
+            else if (ledBrightness > 255) {
+                ledBrightness = 0;
+                analogWrite(pinVal, ledBrightness);
+            }
         }
     }
+
+    void fade(int pinVal, int endVal) {
+        if (endVal == 255) {
+            for (int i = 0; i <= 255; i++) {
+                analogWrite(pinVal, i);
+                delay(10);
+            }
+        }
+        else {
+            for (int i = 255; i >= 0; i--) {
+                analogWrite(pinVal, i);
+                delay(10);
+            }
+        }
+    }
+};
+
+StudyLamp::StudyLamp(/* args */)
+{
 }
 
-void fade(int pinVal, int endVal) {
-    if (endVal == 255) {
-        for (int i = 0; i <= 255; i++) {
-            analogWrite(pinVal, i);
-            delay(10);
-        }
-    }
-    else {
-        for (int i = 255; i >= 0; i--) {
-            analogWrite(pinVal, i);
-            delay(10);
-        }
-    }
+StudyLamp::~StudyLamp()
+{
 }
 
 void setup() {
