@@ -6,4 +6,4 @@ Usage
 #define PomodoroTime 25
 #define BreakTime 5
 ~~~
-Simply change the value next to the variable to alter the length of both your Pomdoro session and the break time.
+Simply change the value next to the variable to alter the length (in minutes) of both your Pomodoro session and the break time.
