@@ -22,7 +22,7 @@ void loop() {
     }
     delay(200);
     for (int i = 0; i <= BreakTime*60000; i++) {
-        if (digitalRead(buttonPin) == HIGH &&s digitalRead(stripPin) == LOW) {
+        if (digitalRead(buttonPin) == HIGH && digitalRead(stripPin) == LOW) {
             digitalWrite(stripPin, HIGH);
             } else if (digitalRead(buttonPin) == HIGH && digitalRead(stripPin) == HIGH) {
                 digitalWrite(stripPin, LOW);
