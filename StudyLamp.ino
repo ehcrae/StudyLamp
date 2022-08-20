@@ -1,45 +1,27 @@
-#define ledSwitch 6
-#define ledPin 5
-int ledBrightness = 255;
-int ledSwitchState = 0;
-
-void timer(int pinVal, float minuteLength) {
-    for (int i = 0; i < minuteLength * 60000; i += 100) {
-        delay(100);
-        analogWrite(pinVal, ledBrightness);
-        ledSwitchState = digitalRead(ledSwitch);
-        if (ledSwitchState == HIGH) ledBrightness += 85;
-        else if (ledBrightness > 255) {
-            ledBrightness = 0;
-            analogWrite(pinVal, ledBrightness);
-        }
-    }
-}
-
-void fade(int pinVal, int endVal) {
-    if (endVal == 255) {
-        for (int i = 0; i <= 255; i++) {
-            analogWrite(pinVal, i);
-            delay(10);
-        }
-    }
-    else {
-        for (int i = 255; i >= 0; i--) {
-            analogWrite(pinVal, i);
-            delay(10);
-        }
-    }
-}
+#define PomodoroTime 25
+#define BreakTime 5
+// change your times above this line :) (the values are in minutes)
+#define stripPin 5
+#define buttonPin 6
 
 void setup() {
-    pinMode(ledSwitch, INPUT);
-    pinMode(ledPin, OUTPUT);
+  pinMode(stripPin, OUTPUT);
+  pinMode(buttonPin, INPUT);
+  digitalWrite(stripPin, HIGH);
 }
 
 void loop() {
-    fade(ledPin, 255);
-    timer(ledPin, 0.25);
-    if (ledBrightness != 0) {
-        fade(ledPin, 0);
-    }
+    for (int i = 0; i <= PomodoroTime*60000; i++) {
+        if (digitalRead(buttonPin) == HIGH && digitalRead(stripPin) == LOW) {
+            digitalWrite(stripPin, HIGH);
+            } else if (digitalRead(buttonPin) == HIGH && digitalRead(stripPin) == HIGH) {
+                digitalWrite(stripPin, LOW);
+                }
+    delay(200);
+    for (int i = 0; i <= BreakTime*60000; i++) {
+        if (digitalRead(buttonPin) == HIGH && digitalRead(stripPin) == LOW) {
+            digitalWrite(stripPin, HIGH);
+            } else if (digitalRead(buttonPin) == HIGH && digitalRead(stripPin) == HIGH) {
+                digitalWrite(stripPin, LOW);
+                }
 }
