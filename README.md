@@ -3,7 +3,7 @@ Arduino-powered lamp that utilises the Pomodoro Technique to aid students in stu
 
 Usage
 ~~~c++
-#define PomodoroTime 25
-#define BreakTime 5
+unsigned long StudyMinutes = 25;
+unsigned long BreakMinutes = 5;
 ~~~
 Simply change the value next to the variable to alter the length (in minutes) of both your Pomodoro session and the break time.
