@@ -1,8 +1,9 @@
 unsigned long StudyMinutes = 25;
 unsigned long BreakMinutes = 5;
-unsigned long DelayMillis = 1000;
 
 // adjust your timing above this line (in minutes)
+
+unsigned long DelayMillis = 1000;
 
 #define stripPin 5
 #define buttonPin 6
