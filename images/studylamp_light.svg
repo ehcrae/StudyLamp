@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 445.77 98.33"><defs><style>.b,.c,.d{fill:#fff;stroke:#fff;stroke-miterlimit:10;}.b,.e,.d{isolation:isolate;}.b,.d{font-family:HelveticaNeue, Helvetica Neue;font-size:72px;}.c{stroke-width:8px;}.d{stroke-width:2px;}</style></defs><g transform="translate(81.39 62.7)"><g class="e" transform="translate(81.39 62.7)"><text class="b" transform="translate(73.9 62.7)"><tspan x="0" y="0">StudyLamp</tspan></text></g><g class="e" transform="translate(81.39 62.7)"><text class="d" transform="translate(73.9 62.7)"><tspan x="0" y="0">StudyLamp</tspan></text></g></g><polygon class="c" points="66.95 60.82 7.55 60.51 37.69 16.34 66.95 60.82"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="a" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 401.2 87.1" style="enable-background:new 0 0 401.2 87.1;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#221F1F;}
+	.st1{font-family:'HelveticaNeue';}
+	.st2{font-size:63.57px;}
+	.st3{fill:#FFFFFF;}
+	.st4{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#FFFFFF;stroke-width:8;stroke-miterlimit:10;}
+</style>
+<g transform="translate(81.39 62.7)">
+	<text transform="matrix(1 0 0 1 -11.7339 -8.0145)" class="st0 st1 st2">StudyLamp</text>
+	<text transform="matrix(1 0 0 1 -11.7339 -8.0145)" class="st3 st1 st2">StudyLamp</text>
+	<text transform="matrix(1 0 0 1 -11.7339 -8.0145)" class="st4 st1 st2">StudyLamp</text>
+</g>
+<polygon class="st5" points="60,53.1 7.6,52.8 34.2,13.8 "/>
+</svg>
