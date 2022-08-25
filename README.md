@@ -1,4 +1,4 @@
-![StudyLamp](https://raw.githubusercontent.com/ehcrae/StudyLamp/99f81cf29470ba958dc43c8ebabd922f3c130add/images/studylamp.svg)
+![StudyLamp](https://raw.githubusercontent.com/ehcrae/StudyLamp/9703dda2b5d48d3a05bd568191f68ee9533ac310/images/studylamp_light.svg)
 An Arduino-powered lamp that utilises the Pomodoro Technique to aid students in studying. 
 ## Usage
 ~~~c++
